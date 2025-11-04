@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - UP Special Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background-color: #8e24aa;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #6a0dad;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .checkout-container {
+      background-color: #fff;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 700px;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: bolder;
+      text-align: center;
+      color: #811b9d;
+      margin-bottom: 1.5rem;
+    }
+
+    .cart-items {
+      border-top: 2px solid #eee;
+      border-bottom: 2px solid #eee;
+      padding: 1rem 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .cart-item img {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      margin-right: 1rem;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-info h4 {
+      margin-bottom: 0.2rem;
+      color: #811b9d;
+    }
+
+    .cart-item-info p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .total {
+      background-color: #f8e8ff;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+      color: #811b9d;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #444;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    form input:focus, form select:focus, form textarea:focus {
+      border-color: #6a0dad;
+      box-shadow: 0 0 5px #c273f5;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #811b9d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e9c2f1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <div class="navbar">
+    <h1>UP Special Style</h1>
+    <p>Your Checkout</p>
+  </div> -->
+
+  <div class="checkout-container">
+    <h2>Checkout 🛍️</h2>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="total" id="cart-total">Total: 0 EGP</div>
+
+    <form id="checkout-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" rows="3" placeholder="Enter your full address" required></textarea>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" required>
+        <option value="">Select</option>
+        <option value="cash">Cash on Delivery</option>
+        <option value="card">Credit / Debit Card</option>
+      </select>
+
+      <button type="submit">Confirm Order</button>
+    </form>
+  </div>
+
+  <!-- <footer>
+    © 2025 UP Special Style | Handmade with love 💜
+  </footer> -->
+
+  <script>
+    // جلب السلة من localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
+    function renderCart() {
+      cartContainer.innerHTML = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('cart-item');
+        itemDiv.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div class="cart-item-info">
+            <h4>${item.name}</h4>
+            <p>${item.price} EGP × ${item.quantity} = <strong>${item.price * item.quantity} EGP</strong></p>
+          </div>
+        `;
+        cartContainer.appendChild(itemDiv);
+        total += item.price * item.quantity;
+      });
+
+      cartTotal.textContent = `Total: ${total.toFixed(2)} EGP`;
+    }
+
+    renderCart();
+
+    // فورم تأكيد الطلب
+    document.getElementById('checkout-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('✅ Order Confirmed! Thank you for shopping with UP Special Style 💜');
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html'; // بعد التأكيد يرجع للصفحة الرئيسية
+    });
+  </script>
+</body>
+</html>

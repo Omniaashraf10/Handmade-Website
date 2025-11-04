@@ -1,0 +1,326 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #811b9d; /* تدرج موف غامق جذاب */
+  padding: 0.7rem 2rem;
+  box-shadow: 0 2px 15px rgba(106, 27, 154, 0.3);
+  
+}
+
+.brand-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.brand-sub {
+  font-size: 0.9rem;
+  color: #f3e5f5;
+  margin-left: 5px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #e9c2f1 !important;
+  transform: translateY(-2px);
+}
+
+/* ===== Buttons ===== */
+.btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn-custom:hover {
+  background-color: #e9c2f1;
+  color: #4a0072;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive Navbar ===== */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .btns {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* ===== Cart Icon ===== */
+.cart-icon {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.cart-icon:hover {
+  color: #e9c2f1;
+  transform: scale(1.1);
+}
+
+
+/* ===== Hero Section ===== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #8e24aa; /* موف فاتح مع بنفسجي */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 3rem;
+  z-index: 2;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn-shop {
+  background-color: #fff;
+  color: #6a1b9a;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-shop:hover {
+  background-color: #f3e5f5;
+  color: #4a0072;
+  transform: translateY(-3px);
+}
+
+/* Image Section */
+.hero-img {
+  flex: 1 1 45%;
+  text-align: right;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(74, 0, 114, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-img img {
+    max-width: 300px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Services Section ===== */
+.service-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f3e5f5, #ede7f6);
+}
+
+.service-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #9e5890 !important;
+  margin-bottom: 40px;
+}
+
+/* ===== Cards Layout (side by side) ===== */
+.cards-wrapper {
+  display: flex;
+  justify-content: center; /* الكروت في النص */
+  align-items: flex-start;
+  flex-wrap: wrap; /* عشان لما الشاشة تصغر الكروت تنزل تحت بعض */
+  gap: 40px; /* مسافة بين الكروت */
+  padding: 40px 0;
+}
+
+.cards-wrapper .card {
+  width: 18rem;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #fff8fc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-wrapper .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(179, 108, 161, 0.2);
+}
+
+.cards-wrapper .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 3px solid #f1d4ec;
+}
+
+.cards-wrapper .card-title {
+  font-weight: 600;
+  color: #b36ca1;
+}
+
+.cards-wrapper .card-text {
+  color: #7d677f;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.cards-wrapper h6 {
+  color: #b36ca1;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-shop-now {
+  background-color: #b36ca1;
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-shop-now:hover {
+  background-color: #9e5890;
+  box-shadow: 0 0 10px rgba(179, 108, 161, 0.4);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #811b9d; /* نفس لون النافبار */
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  box-shadow: 0 -2px 15px rgba(106, 27, 154, 0.3);
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-logo span {
+  color: #fff; /* لون ذهبي بسيط */
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin: 10px 0 25px;
+  color: #f3e5f5;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffd54f;
+  transform: translateY(-3px);
+}
+
+.footer .copyright {
+  font-size: 0.9rem;
+  color: #f3e5f5;
+  margin-top: 15px;
+}
+
+/* لإزالة أي مسافة بين آخر كارت والفوتر */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3e8f7; /* نفس لون الخلفية العام */
+}
+
+/* لو في container أو section قبل الفوتر */
+.container, .cards-section, section {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* الفوتر */
+footer {
+  margin-top: 0 !important;
+  padding-top: 40px;
+  background-color: #811b9d;
+  color: #fff;
+  box-shadow: none !important;
+  border-top: none !important;
+}
+

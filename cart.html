@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light"> -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <span class="brand-logo">UP</span>
+      <span class="brand-sub">Special Style</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Services">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+
+      <div class="btns">
+        <!-- أيقونة السلة -->
+<a href="cart.html" class="cart-icon position-relative">
+  <i class="bi bi-cart-fill" style="font-size: 1.5rem; color: white;"></i>
+  <span id="cart-count" 
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark"
+        style="font-size: 0.7rem; padding: 3px 6px;">
+    0
+  </span>
+</a>
+
+        <!-- زرار الطلب -->
+        <a href="#" class="btn btn-custom">Order Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4 text-white">🛍️ Your Cart</h2>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-summary">
+      <h4>Total: <span id="cart-total">0</span> EGP</h4>
+      <button class="btn btn-dark mt-3" onclick="window.location.href='check.html'">
+  Checkout
+</button>
+
+    </div>
+  </div>
+
+
+<!-- ===== Footer ===== -->
+<footer class="footer mt-5">
+  <div class="container text-center py-4">
+    <h3 class="footer-logo">UP <span>Special Style</span></h3>
+    <p class="footer-text">
+      Handmade with love — adding sparkle and elegance to every detail. 💜
+    </p>
+
+    <!-- <div class="social-icons mb-3">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div> -->
+
+    <p class="copyright">
+      © 2025 UP Special Style — All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="cart.js">
+    // // نجيب السلة من localStorage
+    // let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // const cartContainer = document.getElementById('cart-items');
+    // const cartTotal = document.getElementById('cart-total');
+
+    // function renderCart() {
+    //   cartContainer.innerHTML = '';
+    //   let total = 0;
+
+    //   cart.forEach((item, index) => {
+    //     const itemTotal = item.price * item.quantity;
+    //     total += itemTotal;
+
+    //     cartContainer.innerHTML += `
+    //       <div class="cart-item">
+    //         <div class="d-flex align-items-center">
+    //           <img src="${item.image}" alt="${item.name}">
+    //           <div class="ms-3">
+    //             <h5>${item.name}</h5>
+    //             <p>${item.price} EGP × ${item.quantity} = <strong>${itemTotal} EGP</strong></p>
+    //           </div>
+    //         </div>
+    //         <div>
+    //           <button onclick="decreaseQuantity(${index})">−</button>
+    //           <button onclick="increaseQuantity(${index})">+</button>
+    //           <button onclick="removeItem(${index})">Remove</button>
+    //         </div>
+    //       </div>
+    //     `;
+    //   });
+
+    //   cartTotal.textContent = total.toFixed(2);
+    // }
+
+    // function increaseQuantity(index) {
+    //   cart[index].quantity++;
+    //   localStorage.setItem('cart', JSON.stringify(cart));
+    //   renderCart();
+    // }
+
+    // function decreaseQuantity(index) {
+    //   if (cart[index].quantity > 1) {
+    //     cart[index].quantity--;
+    //   } else {
+    //     cart.splice(index, 1);
+    //   }
+    //   localStorage.setItem('cart', JSON.stringify(cart));
+    //   renderCart();
+    // }
+
+    // function removeItem(index) {
+    //   cart.splice(index, 1);
+    //   localStorage.setItem('cart', JSON.stringify(cart));
+    //   renderCart();
+    // }
+
+    // renderCart();
+  </script>
+</body>
+</html>

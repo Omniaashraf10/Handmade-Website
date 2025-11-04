@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UP | Handmade Beaded Bags</title>
+
+  <!-- Bootstrap -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light"> -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <span class="brand-logo">UP</span>
+      <span class="brand-sub">Special Style</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Services">Collections</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="btns">
+        <!-- أيقونة السلة -->
+<a href="cart.html" class="cart-icon position-relative">
+  <i class="bi bi-cart-fill" style="font-size: 1.5rem; color: white;"></i>
+  <span id="cart-count" 
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark"
+        style="font-size: 0.7rem; padding: 3px 6px;">
+    0
+  </span>
+</a>
+
+        <!-- زرار الطلب -->
+        <a href="#" class="btn btn-custom">Order Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+  <div class="hero-content">
+    <div class="hero-text" data-aos="fade-up" data-aos-duration="1200">
+      <h2>Discover the Art of Beaded Elegance</h2>
+      <p>Handmade with love — unique beaded bags crafted to shine with your style.</p>
+      <a href="#collections" class="btn btn-shop">Shop Now</a>
+    </div>
+
+    <div class="hero-img" data-aos="fade-left" data-aos-duration="1200">
+      <img src="bags/pearl bag.jpg" alt="Beaded Bags" />
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="service-section" id="Services">
+  <!-- <h2>Collections</h2> -->
+
+  <!-- Bags -->
+  <h2>. Bags .</h2>
+
+  <div class="cards-wrapper">
+    <div class="card">
+      <img src="bags/img1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pearl Beaded Bag</h5>
+        <p class="card-text">
+          Handmade beaded bag featuring sparkling pearl details and pearl accents — perfect for evening events.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 450</h6>
+        <button class="btn-shop-now" onclick="addToCart('Pearl Beaded Bag', 450, 'bags/img1.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/img6.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Heart Beaded Bag</h5>
+        <p class="card-text">
+          Handmade heart-beaded bag crafted with love — a playful yet elegant accessory that perfectly complements your romantic style.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 400</h6>
+        <button class="btn-shop-now" onclick="addToCart('Heart Beaded Bag', 400, 'bags/img6.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/img8.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Beaded Bag</h5>
+        <p class="card-text">
+          Handmade beaded bag featuring a stunning mix of crystal beads — designed to add sparkle and charm to any outfit.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 750</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Beaded Bag', 750, 'bags/img8.jpg')"> 
+          Add to Cart</button>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/imgg13.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mini Beaded Bag</h5>
+        <p class="card-text">
+          Handmade beaded bag crafted with love — a playful yet elegant accessory that perfectly complements your romantic style.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 350</h6>
+        <button class="btn-shop-now" onclick="addToCart('Mini Beaded Bag', 350, 'bags/imgg13.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/img9.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Beaded Bag</h5>
+        <p class="card-text">
+          Handmade beaded bag featuring a stunning mix of crystal beads — designed to add sparkle and charm to any outfit.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 400</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Beaded Bag', 400, 'bags/img9.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/img77.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pearl Beaded Bag</h5>
+        <p class="card-text">
+           Handmade beaded bag featuring sparkling pearl details and pearl accents — perfect for evening events.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 480</h6>
+        <button class="btn-shop-now" onclick="addToCart('Pearl Beaded Bag', 480, 'bags/img77.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/img3.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pearl Beaded Bag</h5>
+        <p class="card-text">
+          Handmade beaded bag crafted with love — a playful yet elegant accessory that perfectly complements your style.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 600</h6>
+        <button class="btn-shop-now" onclick="addToCart('Pearl Beaded Bag', 600, 'bags/img3.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/imgg11.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Heart Beaded Bag</h5>
+        <p class="card-text">
+          Handmade heart-beaded bag crafted with love — a playful yet elegant accessory that perfectly complements your romantic style.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 300</h6>
+        <button class="btn-shop-now" onclick="addToCart('Heart Beaded Bag', 300, 'bags/imgg11.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/imgg15.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Beaded Bag</h5>
+        <p class="card-text">
+          Handmade crystal bag featuring a stunning mix of crystal beads — designed to add sparkle and charm to any outfit.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 600</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Beaded Bag', 600, 'bags/imgg15.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/sa.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Beaded Bag</h5>
+        <p class="card-text">
+          Handmade beaded bag crafted with love — a playful yet elegant accessory that perfectly complements your style.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 650</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Beaded Bag', 650, 'bags/sa.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/pearl bag.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Beaded Bag</h5>
+        <p class="card-text">
+          Handmade crystal bag crafted with love — a playful yet elegant accessory that perfectly complements your style.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 450</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Beaded Bag', 450, 'bags/pearl bag.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bags/img5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pearl Beaded Bag</h5>
+        <p class="card-text">
+          Handmade beaded bag crafted with love — a playful yet elegant accessory that perfectly complements your style.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 500</h6>
+        <button class="btn-shop-now" onclick="addToCart('Pearl Beaded Bag', 500, 'bags/img5.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Mobile Holders -->
+ <h2>. Mobile Holders .</h2>
+
+  <div class="cards-wrapper">
+    <div class="card">
+      <img src="mob holders/mob2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Beaded Mobile Holder</h5>
+        <p class="card-text">
+          Handmade mobile holder beautifully designed with delicate beads — stylish, durable, 
+          and perfect for keeping your phone secure in elegance.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 250</h6>
+        <button class="btn-shop-now" onclick="addToCart('Beaded Mobile Holder', 250, 'mob holders/mob2.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="mob holders/mob3.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Beaded Mobile Holder</h5>
+        <p class="card-text">
+          A chic handmade beaded mobile holder that blends function with fashion — crafted to add 
+          a touch of sparkle while keeping your phone close and secure.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 250</h6>
+        <button class="btn-shop-now" onclick="addToCart('Beaded Mobile Holder', 250, 'mob holders/mob3.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="mob holders/mob4.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mobile Holder</h5>
+        <p class="card-text">
+          Handmade mobile holder beautifully designed with delicate beads — stylish, durable, 
+          and perfect for keeping your phone secure in elegance.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 250</h6>
+        <button class="btn-shop-now" onclick="addToCart('Mobile Holder', 250, 'mob holders/mob4.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="mob holders/mob5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Mobile Holder</h5>
+        <p class="card-text">
+          A chic handmade beaded mobile holder that blends function with fashion — crafted to add 
+          a touch of sparkle while keeping your phone close and secure.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 300</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Mobile Holder', 300, 'mob holders/mob5.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="mob holders/mob6.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Mobile Holder</h5>
+        <p class="card-text">
+          Handmade mobile holder beautifully designed with delicate beads — stylish, durable, 
+          and perfect for keeping your phone secure in elegance.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 300</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Mobile Holder', 300, 'mob holders/mob6.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="mob holders/mob7.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Mobile Holder</h5>
+        <p class="card-text">
+          A chic handmade beaded mobile holder that blends function with fashion — crafted to add 
+          a touch of sparkle while keeping your phone close and secure.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 350</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Mobile Holder', 350, 'mob holders/mob7.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="mob holders/mob8.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crystal Mobile Holder</h5>
+        <p class="card-text">
+          Handmade mobile holder beautifully designed with delicate beads — stylish, durable, 
+          and perfect for keeping your phone secure in elegance.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 350</h6>
+        <button class="btn-shop-now" onclick="addToCart('Crystal Mobile Holder', 350, 'mob holders/mob8.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+
+  
+<!-- Card Holders -->
+ <h2>. Card Holders .</h2>
+
+  <div class="cards-wrapper">
+    <div class="card">
+      <img src="card holders/img2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card Holder</h5>
+        <p class="card-text">
+          Elegant handmade beaded card holder — compact, stylish, and sparkles with every detail.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 150</h6>
+        <button class="btn-shop-now" onclick="addToCart('Card Holder', 150, 'card holders/img2.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card holders/imgg14.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card Holder</h5>
+        <p class="card-text">
+          Elegant handmade beaded card holder — compact, stylish, and sparkles with every detail.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 200</h6>
+        <button class="btn-shop-now" onclick="addToCart('Card Holder', 200, 'card holders/imgg14.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card holders/card1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card Holder</h5>
+        <p class="card-text">
+          Elegant handmade crystal card holder — compact, stylish, and sparkles with every detail.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 250</h6>
+        <button class="btn-shop-now" onclick="addToCart('Card Holder', 250, 'card holders/card1.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card holders/card2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card Holder</h5>
+        <p class="card-text">
+          Elegant handmade crystal card holder — compact, stylish, and sparkles with every detail.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 200</h6>
+        <button class="btn-shop-now" onclick="addToCart('Card Holder', 200, 'card holders/card2.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card holders/card3.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card Holder</h5>
+        <p class="card-text">
+          Elegant handmade beaded card holder — compact, stylish, and sparkles with every detail.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 250</h6>
+        <button class="btn-shop-now" onclick="addToCart('Card Holder', 250, 'card holders/card3.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card holders/card4.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card Holder</h5>
+        <p class="card-text">
+          Elegant handmade beaded card holder — compact, stylish, and sparkles with every detail.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 150</h6>
+        <button class="btn-shop-now" onclick="addToCart('Card Holder', 150, 'card holders/card4.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- Others -->
+ <h2>. Others .</h2>
+
+  <div class="cards-wrapper">
+    <div class="card">
+      <img src="others/heart1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Heart Medal</h5>
+        <p class="card-text">
+          Handmade heart-beaded medal crafted with love — a charming accessory that 
+          symbolizes elegance, joy, and a touch of sparkle.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 50</h6>
+        <button class="btn-shop-now" onclick="addToCart('Heart Medal', 50, 'others/heart1.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="others/letter2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Letter Medal</h5>
+        <p class="card-text">
+          Personalized letter beaded medal — handmade with care and delicate beads, 
+          adding a unique and elegant touch that reflects your individuality.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 60</h6>
+        <button class="btn-shop-now" onclick="addToCart('Letter Medal', 60, 'others/letter2.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="others/fyonka1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Fyonka Medal</h5>
+        <p class="card-text">
+          Handmade beaded medal crafted with love — a charming accessory that 
+          symbolizes elegance, joy, and a touch of sparkle.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 80</h6>
+        <button class="btn-shop-now" onclick="addToCart('Fyonka Medal', 80, 'others/fyonka1.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="others/heart2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Heart Medal</h5>
+        <p class="card-text">
+          Handmade heart-beaded medal crafted with love — a charming accessory that 
+          symbolizes elegance, joy, and a touch of sparkle.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 50</h6>
+        <button class="btn-shop-now" onclick="addToCart('Heart Medal', 50, 'others/heart2.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="others/belt1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Beaded Belts</h5>
+        <p class="card-text">
+          Exquisitely handcrafted beaded belt — blending timeless elegance with intricate 
+          beadwork to accentuate your waist with sparkle and sophistication.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 150</h6>
+        <button class="btn-shop-now" onclick="addToCart('Beaded Belt', 150, 'others/belt1.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="others/strap1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Phone Strap</h5>
+        <p class="card-text">
+          Handmade beaded phone strap combining beauty and function — adds a stylish 
+          sparkle while keeping your phone close and secure.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 60</h6>
+        <button class="btn-shop-now" onclick="addToCart('Phone Strap', 60, 'others/strap1.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="others/strap2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Phone Strap</h5>
+        <p class="card-text">
+          Handmade beaded phone strap combining beauty and function — adds a stylish 
+          sparkle while keeping your phone close and secure.
+        </p>
+        <h6 style="color: #b36ca1; font-weight: bold;">EGP 80</h6>
+        <button class="btn-shop-now" onclick="addToCart('Phone Strap', 80, 'others/strap2.jpg')">
+          Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+<!-- ===== Footer ===== -->
+<footer class="footer mt-5">
+  <div class="container text-center py-4">
+    <h3 class="footer-logo">UP <span>Special Style</span></h3>
+    <p class="footer-text">
+      Handmade with love — adding sparkle and elegance to every detail. 💜
+    </p>
+
+    <!-- <div class="social-icons mb-3">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div> -->
+
+    <p class="copyright">
+      © 2025 UP Special Style — All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
